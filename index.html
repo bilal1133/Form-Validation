@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="heading-cover d-flex flex-column justify-content-center">
+         <h1 class="heading">Assignment</h1>
+         <h1 class="heading">Form Validation</h1>
+      </div>
+     
+      <form class="form-cont">
+       <div class="small-cont">
+         <h5>Estate</h4>
+          <input type="checkbox" id="radio-a1" class="radio" checked onclick="if(document.getElementById('radio-a1').checked===true){
+            document.getElementById('radio-a2').checked=false;
+              document.getElementById('in-a2').disabled=true
+            }if(document.getElementById('in-a1').disabled===true){document.getElementById('in-a1').disabled=false}" />
+              <input id='in-a1' type="number" pattern="/^-?\d+\.?\d*$/" min="0" max="100" onKeyPress="if(this.value.length==2) return false;"  oninput="validity.valid||(value='');"/> %
+              
+              <br/>
+              
+              <input type="checkbox" id="radio-a2" class="radio" onclick="if(document.getElementById('radio-a2').checked===true){
+            document.getElementById('radio-a1').checked=false;
+              document.getElementById('in-a1').disabled=true;
+            }if(document.getElementById('in-a2').disabled===true){document.getElementById('in-a2').disabled=false}"/>
+              <input type="number" id="in-a2" max="100" min="0" pattern="/^-?\d+\.?\d*$/" disabled  onKeyPress="if(this.value.length==5) return false;"  oninput="validity.valid||(value='');"  /> £
+    
+       
+       </div>
+       <div class="small-cont">
+        <h5>5-6 Passengers</h4>
+        <input type="checkbox" id="radio-b1"  min="0" max="100"  class="radio" checked onclick="if(document.getElementById('radio-b1').checked===true){
+          document.getElementById('radio-b2').checked=false;
+            document.getElementById('in-b2').disabled=true
+          }if(document.getElementById('in-b1').disabled===true){document.getElementById('in-b1').disabled=false}" />
+            <input id='in-b1'  min="0" max="100"  type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"  oninput="validity.valid||(value='');"/> %
+            
+            <br/>
+            
+            <input type="checkbox"   min="0" max="100" id="radio-b2" class="radio" onclick="if(document.getElementById('radio-b2').checked===true){
+          document.getElementById('radio-b1').checked=false;
+            document.getElementById('in-b1').disabled=true;
+          }if(document.getElementById('in-b2').disabled===true){document.getElementById('in-b2').disabled=false}"/>
+            <input  min="0" max="100"  type="number" id="in-b2" pattern="/^-?\d+\.?\d*$/" disabled  onKeyPress="if(this.value.length==5) return false;"  oninput="validity.valid||(value='');"  /> £
+       </div>
+       <div class="small-cont">
+        <h5>7 passengers</h4>
+        <input  min="0" max="100"  type="checkbox" id="radio-c1" class="radio" checked onclick="if(document.getElementById('radio-c1').checked===true){
+          document.getElementById('radio-c2').checked=false;
+            document.getElementById('in-c2').disabled=true
+          }if(document.getElementById('in-c1').disabled===true){document.getElementById('in-c1').disabled=false}" />
+            <input  min="0" max="100"  id='in-c1' type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"  oninput="validity.valid||(value='');"/> %
+            
+            <br/>
+            
+            <input  min="0" max="100"  type="checkbox" id="radio-c2" class="radio" onclick="if(document.getElementById('radio-c2').checked===true){
+          document.getElementById('radio-c1').checked=false;
+            document.getElementById('in-c1').disabled=true;
+          }if(document.getElementById('in-c2').disabled===true){document.getElementById('in-c2').disabled=false}"/>
+            <input type="number"  min="0" max="100"  id="in-c2" pattern="/^-?\d+\.?\d*$/" disabled  onKeyPress="if(this.value.length==5) return false;"  oninput="validity.valid||(value='');"  /> £
+       </div>
+       <div class="small-cont">
+        <h5>8 passengers</h4>
+        <input  min="0" max="100"  type="checkbox" id="radio-d1" class="radio" checked onclick="if(document.getElementById('radio-d1').checked===true){
+          document.getElementById('radio-d2').checked=false;
+            document.getElementById('in-d2').disabled=true
+          }if(document.getElementById('in-d').disabled===true){document.getElementById('in-d').disabled=false}" />
+            <input id='in-d'  min="0" max="100"  type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"  oninput="validity.valid||(value='');"/> %
+            
+            <br/>
+            
+            <input type="checkbox" id="radio-d2" class="radio" onclick="if(document.getElementById('radio-d2').checked===true){
+          document.getElementById('radio-d1').checked=false;
+            document.getElementById('in-d').disabled=true;
+          }if(document.getElementById('in-d2').disabled===true){document.getElementById('in-d2').disabled=false}"/>
+            <input type="number"  min="0" max="100"  id="in-d2" pattern="/^-?\d+\.?\d*$/" disabled  onKeyPress="if(this.value.length==5) return false;"  oninput="validity.valid||(value='');"  /> £
+       </div>
+       <div class="small-cont">
+        <h5>9 passengers</h4>
+         <input  min="0" max="100"  type="checkbox" id="radio-e1" class="radio" checked onclick="if(document.getElementById('radio-e1').checked===true){
+	document.getElementById('radio-e2').checked=false;
+		document.getElementById('in-e2').disabled=true
+	}if(document.getElementById('in-e1').disabled===true){document.getElementById('in-e1').disabled=false}" />
+    <input id='in-e1'  min="0" max="100"  type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"  oninput="validity.valid||(value='');"/> %
+    
+    <br/>
+    
+    <input type="checkbox" id="radio-e2" class="radio"  min="0" max="100"  onclick="if(document.getElementById('radio-e2').checked===true){
+	document.getElementById('radio-e1').checked=false;
+		document.getElementById('in-e1').disabled=true;
+	}if(document.getElementById('in-e2').disabled===true){document.getElementById('in-e2').disabled=false}"/>
+    <input type="number" id="in-e2" pattern="/^-?\d+\.?\d*$/"  min="0" max="100" disabled  onKeyPress="if(this.value.length==5) return false;"  oninput="validity.valid||(value='');"  /> £
+       </div>
+       <div class="small-cont">
+        <h5>14 passengers</h4>
+        <input type="checkbox" id="radio-f1" class="radio" min="0" max="100"  checked onclick="if(document.getElementById('radio-f1').checked===true){
+          document.getElementById('radio-f2').checked=false;
+            document.getElementById('in-f2').disabled=true
+          }if(document.getElementById('in-f2').disabled===true){document.getElementById('in-f2').disabled=false}" />
+            <input id='in-f2' type="number" min="0" max="100"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"  oninput="validity.valid||(value='');"/> %
+            
+            <br/>
+            
+            <input type="checkbox" id="radio-f2" class="radio" onclick="if(document.getElementById('radio-f2').checked===true){
+          document.getElementById('radio-f1').checked=false;
+            document.getElementById('in-f2').disabled=true;
+          }if(document.getElementById('in-f2').disabled===true){document.getElementById('in-f2').disabled=false}"/>
+            <input type="number" min="0" max="100" id="in-f2" pattern="/^-?\d+\.?\d*$/" disabled  onKeyPress="if(this.value.length==5) return false;"  oninput="validity.valid||(value='');"  /> £
+       </div>
+      </form>
+    </div>
+    <div class="footer">
+      <h5>
+        Name : Bilal Mehmood
+      </h5>
+      <h5>
+        Roll NO : FA17-BCS-113
+      </h5>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
